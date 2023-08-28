@@ -10,6 +10,15 @@ services:
       - SECRET_KEY=samplesecret123
       - ALLOWED_HOSTS=127.0.0.1,localhost
 
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
   proxy:
     build:
       context: ./proxy
@@ -22,3 +31,4 @@ services:
 
 volumes:
   static_data:
+  postgres_data:
