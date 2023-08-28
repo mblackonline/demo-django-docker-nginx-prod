@@ -161,21 +161,7 @@ Rachel D.
     height: 100vh;
     overflow-y: scroll;
   }
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 85dvh;
-    min-height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(./resources/images/hero-background.jpg);
-    justify-content: center;
-    align-items: start;
-  }
-  
+ 
   .hero::before {
     content: "";
     position: absolute;
